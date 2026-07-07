@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-gray-950">
+        
+      <nav class="navbar">
+       <div class="container">
+        <div class="nav-content">
+
+            <!-- Logo -->
+            <div class="logo">
+                <div class="logo-circle"><img src="logo.png" alt="Profile" class="profile"></div>
+                <h1 class="logo-text">FitGenie</h1>
+            </div>
+
+            <!-- Navigation -->
+            <div class="menu">
+                <a href="dashboard.html" class="nav-link active">Home</a>
+                <a href="wellness.html" class="nav-link">Wellness</a>
+                <a href="workout.html" class="nav-link">Workout</a>
+                <a href="diet.html" class="nav-link">Diet</a>
+                <a href="about.html" class="nav-link" target="blank">About</a>
+                <a href="blog.html" class="nav-link" target="blank">Blog</a>
+            </div>
+
+            <!-- Right -->
+            <div class="right">
+                <img src="D-user.png" alt="Profile" class="profile">
+                <button class="menu-btn" onclick="toggleMenu()">☰</button>
+            </div>
+        </div>
+
+         <!-- Mobile Menu -->
+            <div class="mobile-menu" id="mobileMenu">
+
+                <a href="dashboard.html" class="mobile-link">Home</a>
+                <a href="wellness.html" class="mobile-link">Wellness</a>
+                <a href="workout.html" class="mobile-link">Workout</a>
+                <a href="diet.html" class="mobile-link">Diet</a>
+                <a href="about.html" class="mobile-link">About</a>
+                <a href="blog.html" class="mobile-link">Blog</a>
+
+            </div>
+
+            
+    </div>
+</nav>
+   
+      
+<script>
+function toggleMenu() {
+    document.getElementById("mobileMenu").classList.toggle("show");
+}
+</script>
+</body>
+
+</html>

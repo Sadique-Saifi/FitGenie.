@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FitGenie</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+    <nav class="navbar">
+
+        <div class="logo"> <img src="logo.png">FitGenie</div>
+
+        <ul class="nav-links">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">Workout</a></li>
+            <li><a href="#">Diet</a></li>
+            <li><a href="#">Wellness</a></li>
+            <li><a href="#">About</a></li>
+        </ul>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="bmi.html">BMI</a>
+        <a href="blog.html" target="blank">Blog</a>
+        <a href="about.html" target="blank">About</a>
+    </div>
+
+</header>
+
+<section class="hero">
+
+    <div class="left">
+
+        <span class="badge">
+            AI Powered Fitness Platform
+        </span>
+
+        <h1>
+            Build Better Habits.<br>
+            Achieve Better Results.
+        </h1>
+
+        <p>
+            Track workouts, monitor your health,
+            follow personalized diet plans,
+            and reach your fitness goals with FitGenie.
+        </p>
+
+        <div class="features">
+
+            <div class="card"> Workout Plans</div>
+            <div class="card"> Diet Tracker</div>
+            <div class="card"> Analytics</div>
+            <div class="card"> Wellness</div>
+
+        </div>
+
+    </div>
+
+    <div class="right">
+
+        <div class="form-box">
+
+            <div class="tabs">
+
+                <button class="tab active" id="loginTab"
+                    onclick="showLogin()">
+                    Login
+                </button>
+
+                <button class="tab" id="registerTab"
+                    onclick="showRegister()">
+                    Register
+                </button>
+
+            </div>
+
+            <form id="loginForm">
+
+                <input type="email"
+                    placeholder="Email">
+
+                <input type="password"
+                    placeholder="Password">
+
+                <button class="submit-btn">
+                    Login
+                </button>
+
+            </form>
+
+            <form id="registerForm" style="display:none;">
+
+                <input type="text"
+                    placeholder="Full Name">
+
+                <input type="email"
+                    placeholder="Email">
+
+                <input type="password"
+                    placeholder="Password">
+
+                <button class="submit-btn">
+                    Create Account
+                </button>
+
+            </form>
+
+        </div>
+
+    </div>
+
+</section>
+
+<script>
+function toggleMenu(){
+
+const menu=document.getElementById("mobileMenu");
+
+    if(menu.style.display==="block"){
+        menu.style.display="none";
+    }else{
+        menu.style.display="block";
+    }
+
+}
+
+const loginForm=document.getElementById("loginForm");
+const registerForm=document.getElementById("registerForm");
+
+const loginTab=document.getElementById("loginTab");
+const registerTab=document.getElementById("registerTab");
+
+function showLogin(){
+
+    loginForm.style.display="block";
+    registerForm.style.display="none";
+
+    loginTab.classList.add("active");
+    registerTab.classList.remove("active");
+
+}
+
+function showRegister(){
+
+    loginForm.style.display="none";
+    registerForm.style.display="block";
+
+    registerTab.classList.add("active");
+    loginTab.classList.remove("active");
+
+}
+</script>
+
+</body>
+</html>
