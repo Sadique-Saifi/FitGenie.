@@ -11,14 +11,12 @@
 <header>
     <nav class="navbar">
 
-        <div class="logo"> <img src="logo.png">FitGenie</div>
+        <div class="logo">FitGenie</div>
 
         <ul class="nav-links">
-            <li><a href="#">Home</a></li>
-            <li><a href="#">Workout</a></li>
-            <li><a href="#">Diet</a></li>
-            <li><a href="#">Wellness</a></li>
-            <li><a href="#">About</a></li>
+            <li><a href="bmi.html">BMI</a></li>
+            <li><a href="blog.html" target="_blank">Blog</a></li>
+            <li><a href="about.html" target="_blank">About</a></li>
         </ul>
 
         <button class="menu-btn" onclick="toggleMenu()">☰</button>
@@ -27,8 +25,8 @@
 
     <div class="mobile-menu" id="mobileMenu">
         <a href="bmi.html">BMI</a>
-        <a href="blog.html" target="blank">Blog</a>
-        <a href="about.html" target="blank">About</a>
+        <a href="blog.html" target="_blank">Blog</a>
+        <a href="about.html" target="_blank">About</a>
     </div>
 
 </header>
@@ -64,9 +62,7 @@
     </div>
 
     <div class="right">
-
         <div class="form-box">
-
             <div class="tabs">
 
                 <button class="tab active" id="loginTab"
@@ -78,50 +74,42 @@
                     onclick="showRegister()">
                     Register
                 </button>
-
             </div>
 
             <form id="loginForm">
+                <label for="loginemail">Email:</label>
+                <input type="email" id="loginemail" placeholder="Email" required>
 
-                <input type="email"
-                    placeholder="Email">
+                <label for="loginpassword">Password:</label>
+                <input type="password" id="loginpassword" placeholder="Password" required>
 
-                <input type="password"
-                    placeholder="Password">
-
-                <button class="submit-btn">
+                <button type="submit" class="submit-btn">
                     Login
                 </button>
-
             </form>
 
             <form id="registerForm" style="display:none;">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" placeholder="Full Name" required>
 
-                <input type="text"
-                    placeholder="Full Name">
+                <label for="registeremail">Email:</label>
+                <input type="email" id="registeremail" placeholder="Email" required>
 
-                <input type="email"
-                    placeholder="Email">
+                <label for="registerpassword">Password:</label>
+                <input type="password" id="registerpassword" placeholder="Password" required>
 
-                <input type="password"
-                    placeholder="Password">
-
-                <button class="submit-btn">
+                <button type="submit" class="submit-btn">
                     Create Account
                 </button>
-
             </form>
-
         </div>
-
     </div>
-
 </section>
 
 <script>
 function toggleMenu(){
 
-const menu=document.getElementById("mobileMenu");
+const menu = document.getElementById("mobileMenu");
 
     if(menu.style.display==="block"){
         menu.style.display="none";
