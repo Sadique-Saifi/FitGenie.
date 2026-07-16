@@ -10,7 +10,6 @@
 <body>
 
 <nav class="navbar">
-
     <div class="logo">
         FitGenie
     </div>
@@ -28,8 +27,148 @@
     </button>
 
 </nav>
-      
-<script src="script.js"></script>
+  <div class="wellness-container">
+
+    <div class="wellness-form">
+
+        <h2>Create Your Fitness Profile</h2>
+
+        <form>
+
+            <!-- Personal -->
+            <div class="form-section">
+                <h3>Personal Information</h3>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="name">Full Name</label>
+                        <input type="text" id="name" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="age">Age</label>
+                        <input type="number" id="age" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="gender">Gender</label>
+                        <select id="gender" required>
+                            <option>Male</option>
+                            <option>Female</option>
+                            <option>Other</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+
+                        <label for="activitylevel">Activity Level</label>
+                        <select  id="activitylevel" required>
+                            <option>Sedentary</option>
+                            <option>Lightly Active</option>
+                            <option>Moderately Active</option>
+                            <option>Very Active</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Body Measurements</h3>
+                <div class="form-row">
+                    <div class="input-group">
+                        <label for="height">Height (cm)</label>
+                        <input type="number" id="height" required>
+                    </div>
+
+                    <div class="input-group">
+                        <label for="weight">Weight (kg)</label>
+                        <input type="number" id="weight" required>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-section">
+                <h3>Fitness Goal</h3>
+
+                <select id="goal" required>
+
+                    <option>Weight Loss</option>
+                    <option>Weight Gain</option>
+                    <option>Muscle Building</option>
+                    <option>General Fitness</option>
+                    <option>Improve Endurance</option>
+
+                </select>
+            </div>
+
+            <div class="form-section">
+                <h3>Health Information</h3>
+
+                <div class="input-group">
+
+                    <label for="injury">Any Injury?</label>
+
+                    <select id="injury" onchange="showTextbox()" >
+
+                        <option>None</option>
+                        <option>Knee Pain</option>
+                        <option>Back Pain</option>
+                        <option>Shoulder Injury</option>
+                        <option>Neck Pain</option>
+                        <option>Other</option>
+
+                    </select>
+                </div>
+
+                <div class="input-group" id="injuryBox" style="display:none;">
+
+                    <label for="injuryDescribe">Describe Injury</label>
+                    <textarea rows="4"></textarea>
+                </div>
+            </div>
+
+            <div class="form-section">
+
+                <h3>Food Preference</h3>
+                <select id="foodpreference" >
+                    <option>Vegetarian</option>
+                    <option>Non Vegetarian</option>
+                    <option>Eggetarian</option>
+                    <option>Vegan</option>
+                    <option>No Preference</option>
+                </select>
+            </div>
+
+            <div class="form-section">
+                <h3>Workout Preference</h3>
+
+                <div class="checkbox-grid" id="workoutpreference">
+
+                    <label ><input type="checkbox"> Gym</label>
+                    <label ><input type="checkbox"> Home</label>
+                    <label ><input type="checkbox"> Yoga</label>
+                    <label ><input type="checkbox"> Cardio</label>
+                    <label ><input type="checkbox"> Running</label>
+                    <label ><input type="checkbox"> Strength</label>
+
+                </div>
+            </div>
+            <div class="form-section">
+                <h3>Additional Preference</h3>
+                <textarea rows="4"></textarea>
+
+            </div>
+
+            <button class="save-btn">
+                Save Profile
+            </button>
+        </form>
+    </div>
+
+</div>
+
+
+<script src="main.js"></script>
 </body>
 
 </html>

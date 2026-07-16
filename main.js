@@ -14,3 +14,18 @@
          }
 
         });
+
+
+//-----------wellness form
+
+ function showTextbox(){
+    const injury = document.getElementById("injury");
+    const injuryBox = document.getElementById("injuryBox");
+    if(injury.value === "None"){
+        injuryBox.style.display = "none";
+    }
+    else{
+        injuryBox.style.display = "block";
+    }
+
+}

@@ -308,7 +308,6 @@ input:focus{
 }
 
 .hero{
-
     flex-direction:column;
     text-align:center;
 }
@@ -324,5 +323,119 @@ input:focus{
 .form-box{
     width:100%;
 }
+   /* --------wellness form------- */
+.form-row{
+        grid-template-columns:1fr;
+    }
 
+.checkbox-grid{
+        grid-template-columns:1fr;
+    }
+
+.wellness-form{
+        padding:20px;
+    }
+
+
+}
+
+
+/* ------------wellness form----- */
+
+.wellness-container{
+    width:100%;
+    padding:60px 20px;
+    display:flex;
+    justify-content:center;
+    background:#7dadf5;
+
+}
+
+.wellness-form{
+
+    width:100%;
+    max-width:850px;
+    background:#ee6c6c;
+    border:1px solid #ddd;
+    border-radius:10px;
+    padding:35px;
+
+}
+
+.wellness-form h2{
+    text-align:center;
+    margin-bottom:35px;
+}
+
+.form-section{
+    margin-bottom:30px;
+}
+
+.form-section h3{
+    margin-bottom:18px;
+    color:#0b121c;
+    border-bottom:1px solid #ddd;
+    padding-bottom:8px;
+
+}
+
+.form-row{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:20px;
+
+}
+
+.input-group{
+    display:flex;
+    flex-direction:column;
+    margin-bottom:18px;
+}
+
+.input-group label{
+    margin-bottom:8px;
+    font-weight:600;
+}
+
+.wellness-form input,
+.wellness-form select,
+.wellness-form textarea{
+    width:100%;
+    padding:12px;
+    border:1px solid #ccc;
+    border-radius:6px;
+    font-size:15px;
+}
+
+.checkbox-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:15px;
+}
+
+.checkbox-grid label{
+    display:flex;
+    align-items:center;
+    gap:8px;
+
+}
+
+.checkbox-grid input{
+    width:auto;
+}
+
+.save-btn{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:6px;
+    background:#2563eb;
+    color:#fff;
+    font-size:16px;
+    cursor:pointer;
+
+}
+
+.save-btn:hover{
+    background:#1d4ed8;
 }
